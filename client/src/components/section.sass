@@ -1,0 +1,29 @@
+@import './properties.scss'
+
+.table
+    width: 100%
+    border: 2px solid $primary_color
+    border-collapse: collapse
+    border-radius: 5px
+    text-align: center
+    font-size: 1.2rem
+    thead
+        background-color: $primary_color
+    tbody
+        .impair
+            background-color: $tertiary_color
+        tr
+            td:first-child
+                text-align: left
+                padding-left: 15px
+            td[colSpan]
+                text-align: center
+                background-color: $secondary_color
+            td[title]
+                cursor: help
+        .total
+            text-align: center !important
+            padding-left: 0px !important
+    tfoot
+        border-top: 5px solid $secondary_color
+        font-size: 1.3rem

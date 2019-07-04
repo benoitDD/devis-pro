@@ -1,0 +1,57 @@
+{
+  "name": "devis-pro",
+  "version": "1.0.0",
+  "description": "Affiche un devis en React à partir d'une requête JSON",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/dist",
+    "debug": "node --inspect server/dist",
+    "compile-prod": "webpack --config server/webpack/webpack.prod.js",
+    "compile-dev": "webpack --config server/webpack/webpack.dev.js",
+    "watch": "nodemon --config server/nodemon.json --exec \"npm run compile-dev && npm start\"",
+    "watch-prod": "nodemon --config server/nodemon.json --exec \"npm run compile-prod && npm start\"",
+    "watch-debug": "nodemon --config server/nodemon.json --exec \"npm run compile-dev && npm run debug\"",
+    "build-dev": "webpack --config client/webpack/webpack.dev.js",
+    "build-prod": "webpack --config client/webpack/webpack.prod.js",
+    "linter": "eslint .",
+    "start-easy": "npm run compile-dev && npm run build-prod && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benoitDD/devis-pro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benoitDD/devis-pro/issues"
+  },
+  "homepage": "https://github.com/benoitDD/devis-pro#readme",
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.6",
+    "clean-webpack-plugin": "3.0.0",
+    "dotenv": "8.0.0",
+    "eslint": "6.0.1",
+    "eslint-plugin-react": "7.14.2",
+    "html-webpack-plugin": "3.2.0",
+    "nodemon": "1.19.1",
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5",
+    "webpack-merge": "4.2.1",
+    "webpack-node-externals": "1.7.2"
+  },
+  "dependencies": {
+    "core-js": "3.1.4",
+    "css-loader": "3.0.0",
+    "express": "4.17.1",
+    "loglevel": "1.6.3",
+    "node-sass": "4.12.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1"
+  }
+}
